@@ -20,6 +20,8 @@ router.post("/", postWorkout);
 
 //delete workout
 router.delete("/:id", deleteWorkout);
+
 //update workout
 router.patch("/:id", updateWorkout);
+
 module.exports = router;
