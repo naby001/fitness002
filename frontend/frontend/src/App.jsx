@@ -5,13 +5,14 @@ import Navbar from './components/navbar';
 
 
 
+
 function App() {
   return (
     <>
       <BrowserRouter>
         
        <Navbar/>
-     
+   
         <div className="pages">
           <Routes>
             <Route path="/" element={<Home />} />
