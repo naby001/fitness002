@@ -22,6 +22,24 @@ const getSingleWorkout = async (req, res) => {
 //post new workout
 const postWorkout = async (req, res) => {
   const { title, reps, load } = req.body;
+
+  let emp=[]
+if(!title)
+{
+  emp.push('title')
+}
+if(!load)
+{
+  emp.push('load')
+}
+if(!reps)
+{
+  emp.push('reps')
+}
+if(emp.length>0)
+  return res.status(400).json({err:'plase fill all the fields',emp})
+
+
   try {
     const workout = await Workout.create({ title, reps, load });
     res.status(200).json(workout); // Return workout directly
