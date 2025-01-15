@@ -16,12 +16,12 @@ const Home = () => {
             }
         };
         fetchData(); // Call fetchData function
-    }, []);
+    }, [dispatch]);
 
     return (
         <div>
             <div className="home">
-                the works of the workout
+                
                 <div className="workouts">
                     {workouts && workouts.map((workout) => (
                        <WorkoutDetails key={workout.id} workout={workout}/> // Return the workout title

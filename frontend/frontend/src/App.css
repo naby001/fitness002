@@ -1,4 +1,11 @@
 /* Navbar styles */
+.home{
+  display:flex;
+  justify-content: space-between;
+  position:relative;
+  top:10px;
+ 
+}
 .navbar {
   background-color: #7ebdfc;
   padding: 1rem;
@@ -11,6 +18,7 @@
   justify-content: center; /* Space out items */
   align-items: center; /* Center items vertically */
   overflow-x: auto; /* Allow horizontal scrolling if needed */
+  z-index: 100;
 }
 
 .navbar-brand {
@@ -34,64 +42,64 @@
 }
 
 .workouts {
-  display: grid;
+  flex-grow: 1;
+  max-width: 1000px;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1rem;
   justify-content: center;
 }
 .workoutdetails {
   border-radius: 4px;
-  background: #9f6b6b;
+  background: #b7e5ab;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  margin: 20px auto;
+ 
+  margin: 10px auto;
   padding: 20px;
   position: relative;
-  border: 2px solid #007bff; /* Added border to create a box */
+  border: 2px solid #040405; /* Added border to create a box */
 }
 .workoutdetails p{
   margin: 0;
   font-size:0.9rem;
-  color: #fbfbfb;
+  color: #0c0a0a;
 
 }
 .workoutdetails h2{
   margin: 0;
-  font-size:1.5rem;
+  font-size:2.5rem;
+  color: #007bff;
 
 }
 
 /* Form styles */
-  
 .form-container {
+ 
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  padding: 16px;
-  margin-bottom: 16px;
+  padding: 24px; /* Adds space inside the form */
+  border: 2px solid #040405;
+  max-width: 200px; /* Ensures the form doesn't stretch too wide */
+  width: 100%; /* Allows responsiveness */
+  font-size: larger;
+  max-height: 300px;
 }
-
 .form-title {
   font-size: 1.25rem;
   margin-bottom: 16px;
+  color: #007bff;
 }
 
 .form-label {
   display: block;
-  color: #4a5568;
+  color: #060708;
   font-weight: bold;
   margin-bottom: 8px;
 }
 
-.form-input {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 16px;
-  border: 1px solid #e2e8f0;
-  border-radius: 4px;
-}
 
 .form-button {
-  background-color: #4299e1;
+  background-color: #2f76b0;
   color: white;
   padding: 8px 16px;
   border: none;
@@ -107,9 +115,8 @@
   color: #e53e3e;
   font-size: 0.875rem;
   margin-top: 16px;
- 
 }
 
-.input.error{
-  border:1px solid var(red);
+.input.error {
+  border: 1px solid red;
 }
