@@ -12,7 +12,7 @@ const WorkoutForms = () => {
   const handleSubmit = async (e) => {   
     e.preventDefault();
     const workout = { title, reps, load };
-    const response = await fetch("http://localhost:3000/api/workouts", {
+    const response = await fetch("https://fitness002-1.onrender.com/api/workouts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
