@@ -4,8 +4,8 @@ const WorkoutDetails = ({ workout }) => {
     const { dispatch } = useWorkoutsContext();
 
     const handleClick = async () => {
-        try {
-            const response = await fetch(`http://localhost:3000/api/workouts/dddd${workout._id}`, {
+        
+            const response = await fetch(`http://localhost:3000/api/workouts/${workout._id}`, {
                 method: 'DELETE',
             });
 
@@ -13,12 +13,7 @@ const WorkoutDetails = ({ workout }) => {
 
             if (response.ok) {
                 dispatch({ type: 'DELETE_WORKOUT', payload: json });
-            } else {
-                console.error("Failed to delete the workout:", json.error);
             }
-        } catch (error) {
-            console.error("Error while deleting the workout:", error);
-        }
     };
 
     return (
