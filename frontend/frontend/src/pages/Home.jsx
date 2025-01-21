@@ -9,7 +9,7 @@ const Home = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch("https://fitness002-1.onrender.com/api/workouts");
+            const response = await fetch("http://localhost:3000/api/workouts");
             const json = await response.json();
             if (response.ok) {
                dispatch({ type: "SET_WORKOUTS", payload: json }); // Set workouts

@@ -1,5 +1,5 @@
 // ...existing code...
-import { AuthContext } from "../context/WorkoutContext";
+import { AuthContext } from "../context/AuthContext";
 // ...existing code...
 import { useContext } from "react";
 
