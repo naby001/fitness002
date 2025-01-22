@@ -31,7 +31,7 @@ export const useSignup = () => {
             }
 
             // Save the user to local storage
-            //localStorage.setItem("user", JSON.stringify(json));
+            localStorage.setItem("user", JSON.stringify(json));
 
             // Update the auth context
             dispatch({ type: "LOGIN", payload: json });
