@@ -1,37 +1,17 @@
 import { useState } from "react";
+import {useLogin} from "../Hooks/useLogin";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
+ 
+  const {login,error,isLoading}=useLogin();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError(null);
+    await login(email, password);
 
-    if (!email || !password) {
-      setError("Both fields are required.");
-      return;
-    }
-
-    // Basic email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      setError("Please enter a valid email address.");
-      return;
-    }
-
-    setIsLoading(true);
-    try {
-      console.log(email, password);
-      // Add your login logic here, e.g., API call
-    } catch (err) {
-      setError("Login failed. Please try again.");
-    } finally {
-      setIsLoading(false);
-    }
-  };
+  }
 
   return (
     <form onSubmit={handleSubmit} className="login">
@@ -53,9 +33,10 @@ const Login = () => {
         required
       />
       <br />
-      <button type="submit" disabled={isLoading}>
-        {isLoading ? "Logging in..." : "Login"}
+      <button type="submit" disabled={isLoading}> 
+       Login
       </button>
+      {error&& <div className="error">{error}</div>}  
     </form>
   );
 };
