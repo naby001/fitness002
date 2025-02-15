@@ -1,6 +1,6 @@
 import  { useState } from "react"
 import { useSignup } from "../Hooks/useSignup"
-
+import { Link } from "react-router-dom"
 
 const Signup =()=>{
     const [email,setEmail]=useState('')
@@ -30,8 +30,7 @@ await signup (email,password)
             <br></br>
             <button disabled={isLoading}>Sign Up</button>
             {error &&<div className="error">{error}</div> } 
-
-
+            <p>Already have an account? <Link to="/login">Login</Link></p>
         </form>
     )
 
