@@ -12,7 +12,7 @@ import Signup from './pages/Signup';
 function App() {
   const {user}=useAuthContext();
   return (
-    <>
+    <div style={{ backgroundColor: '#f0f0f0', minHeight: '100vh' }}>
       <BrowserRouter>
         
        <Navbar/>
@@ -26,7 +26,7 @@ function App() {
           </Routes>
         </div>
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 
