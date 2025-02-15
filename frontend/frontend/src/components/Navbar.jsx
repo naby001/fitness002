@@ -21,7 +21,10 @@ const Navbar = () => {
           <span>{user?.email}</span>
           <button onClick={handleClick}>Log Out</button>
           <Link to="/reco">
-            <button>Recommendation</button>
+          <button>Recommendation</button>
+          </Link>
+          <Link to="/form">
+          <button>form</button>
           </Link>
         </div>
       )}
@@ -31,6 +34,10 @@ const Navbar = () => {
           <Link to="/signup">Sign Up</Link>
         </div>
       )}
+      
+      
+          
+        
     </nav>
   );
 };
