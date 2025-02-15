@@ -1,0 +1,28 @@
+.navbar {
+  background-color: #1db639;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Changed to full width */
+  height: auto; /* Adjust height */
+  display: flex; /* Use flexbox for horizontal layout */
+  justify-content: center; /* Space out items */
+  align-items: center; /* Center items vertically */
+  overflow-x: auto; /* Allow horizontal scrolling if needed */
+  z-index: 100;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-link {
+  margin: 0 1rem; /* Adjust margin for horizontal spacing */
+  color: #000;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}

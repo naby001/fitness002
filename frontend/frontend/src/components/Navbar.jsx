@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useLogout } from "../Hooks/useLogout";
 import { useAuthContext } from "../Hooks/useAuthContext";
+import "./Navbar.css"; // Import the new CSS file
 
 const Navbar = () => {
   const {logout } =useLogout()
@@ -11,7 +12,7 @@ const Navbar = () => {
 
   }
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-left">
+    <nav className="navbar">
       <Link to="/">
       <h1 className="navbar-title">Workout Buddy</h1> 
       </Link>

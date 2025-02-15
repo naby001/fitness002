@@ -1,38 +1,9 @@
 /* Navbar styles */
-.home{
-  display:flex;
+.home {
+  display: flex;
   justify-content: space-between;
-  position:relative;
-  top:10px;
- 
-}
-.navbar {
-  background-color: #7ebdfc;
-  padding: 1rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%; /* Changed to full width */
-  height: auto; /* Adjust height */
-  display: flex; /* Use flexbox for horizontal layout */
-  justify-content: center; /* Space out items */
-  align-items: center; /* Center items vertically */
-  overflow-x: auto; /* Allow horizontal scrolling if needed */
-  z-index: 100;
-}
-
-.navbar-brand {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.nav-link {
-  margin: 0 1rem; /* Adjust margin for horizontal spacing */
-  color: #000;
-}
-
-.nav-link:hover {
-  color: #007bff;
+  position: relative;
+  top: 10px;
 }
 
 /* Ensure content does not hide behind the fixed Navbar */
@@ -48,32 +19,31 @@
   gap: 1rem;
   justify-content: center;
 }
+
 .workoutdetails {
   border-radius: 4px;
   background: #b7e5ab;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
- 
   margin: 10px auto;
   padding: 20px;
   position: relative;
   border: 2px solid #040405; /* Added border to create a box */
 }
-.workoutdetails p{
+
+.workoutdetails p {
   margin: 0;
-  font-size:0.9rem;
+  font-size: 0.9rem;
   color: #0c0a0a;
-
 }
-.workoutdetails h2{
-  margin: 0;
-  font-size:2.5rem;
-  color: #007bff;
 
+.workoutdetails h2 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #007bff;
 }
 
 /* Form styles */
 .form-container {
- 
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -84,6 +54,7 @@
   font-size: larger;
   max-height: 300px;
 }
+
 .form-title {
   font-size: 1.25rem;
   margin-bottom: 16px;
@@ -96,7 +67,6 @@
   font-weight: bold;
   margin-bottom: 8px;
 }
-
 
 .form-button {
   background-color: #2f76b0;
@@ -120,17 +90,21 @@
 .input.error {
   border: 1px solid red;
 }
-nav{
+
+nav {
   display: flex;
   align-items: center;
 }
-nav a{
+
+nav a {
   margin-left: 10px;
 }
-form.signup,form.login{
+
+form.signup,
+form.login {
   max-width: 400px;
   margin: 40px auto;
-  padding:20px;
+  padding: 20px;
   background: white;
   border-radius: 4px;
 }
